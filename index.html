@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#a9433f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="PufPu"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="icon-192.png">
+  <title>PufPuChristmas · Panel de galletas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span><div><b>PufPu</b><small>CHRISTMAS</small></div></div>
+      <p class="menu-label">Panel de control</p>
+      <nav id="nav">
+        <button class="nav-item active" data-view="dashboard" data-short="Inicio">⌂ <span>Resumen</span></button>
+        <button class="nav-item" data-view="orders" data-short="Pedidos">☰ <span>Pedidos pendientes</span></button>
+        <button class="nav-item" data-view="calculator" data-short="Masas">◌ <span>Calculadora de masas</span></button>
+        <button class="nav-item" data-view="ingredients" data-short="Inventario">✣ <span>Inventario</span></button>
+        <button class="nav-item" data-view="sales" data-short="Ingresos">↗ <span>Ingresos</span></button>
+      </nav>
+      <div class="season-card"><span>❄</span><b>Temporada navideña</b><small>Todo listo para hornear magia.</small></div>
+      <footer>Hecho con cariño · 2026</footer>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow" id="eyebrow">PANEL DE CONTROL</span><h1 id="page-title">Resumen de temporada</h1></div><div class="top-actions"><span class="status-dot"></span> Datos guardados <button class="avatar" title="Cerrar sesión" onclick="signOut()">PP</button></div></header>
+      <div id="content"></div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
